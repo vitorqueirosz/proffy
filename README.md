@@ -23,6 +23,8 @@ This project was developed with the following technologies:
 - [React](https://github.com/facebook/react)
 - [TypeScript](https://github.com/Microsoft/TypeScript)
 - [React Native](https://github.com/facebook/react-native)
+- [Express](https://github.com/expressjs/express)
+- [Knex](http://knexjs.org)
 </br>
 
 ## :hammer: Tools
