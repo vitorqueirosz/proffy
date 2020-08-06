@@ -6,6 +6,7 @@
  - [What's Proffy?](#-what's-findServices)
  - [Technologies](#-technologies)
  - [Tools](#-tools)
+ - [Installation](#-installation)
 <br />
 
 ## :pencil: Proffy
