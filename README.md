@@ -32,6 +32,7 @@ This project was developed with the following technologies:
 ## :hammer: Tools
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Insomnia](https://insomnia.rest)
+- [Android Studio](https://developer.android.com/studio)
 </br>
 
 ## 👷 Installation
