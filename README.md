@@ -13,7 +13,7 @@
 
 </br>
 <p align="center">
-<img src="https://raw.githubusercontent.com/vitorqueirosz/Proffy/6aee43aa403ea7f270dda94e74b591ab1e17ee36/web/assets/Capa.svg" heigth="20%" width="70%">
+<img src="https://raw.githubusercontent.com/vitorqueirosz/Proffy/16ab18bff998face979fe24af8718f75c1e70629/assets/Capa.svg" heigth="20%" width="70%">
 </p>
 </br>
 
