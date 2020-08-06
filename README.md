@@ -25,6 +25,8 @@ This project was developed with the following technologies:
 - [React Native](https://github.com/facebook/react-native)
 - [Express](https://github.com/expressjs/express)
 - [Knex](http://knexjs.org)
+- [Expo](https://expo.io)
+- [React Navigation](https://reactnavigation.org/docs)
 </br>
 
 ## :hammer: Tools
