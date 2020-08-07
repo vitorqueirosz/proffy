@@ -3,10 +3,11 @@
 
  ## 📍 Índice
  
- - [What's Proffy?](#-what's-findServices)
- - [Technologies](#-technologies)
+ - [Proffy](#-proffy)
+ - [Technologies](#-Technologies)
  - [Tools](#-tools)
  - [Installation](#-installation)
+ 
 <br />
 
 ## :pencil: Proffy
@@ -45,7 +46,10 @@ You need to install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg
 ## ⚙️ Install dependencies
 
     yarn install
-  
+    
+</br>
+
+## :iphone: Run App
 </br>
 
 With ♥ by [Vitor Queiroz](https://www.linkedin.com/in/vitor-queiroz-4b32131a3/)!
