@@ -46,8 +46,6 @@ const Landing: React.FC = () => {
 
             setTotalConnections(total);
         })
-
-
     }, []);
 
     return (
