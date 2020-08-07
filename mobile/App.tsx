@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useCallback, createContext, useState } from 'react';
-
 import light from './src/styles/themes/light';
 import dark from './src/styles/themes/dark';
 
@@ -43,7 +42,7 @@ export default function App() {
             <ThemeContext.Provider value={{ toggleTheme }}>
               <ThemeProvider theme={theme}>
                 <AppStack/>
-                <StatusBar style="light" />
+                <StatusBar style="light"/>
               </ThemeProvider>
             </ThemeContext.Provider>
     );

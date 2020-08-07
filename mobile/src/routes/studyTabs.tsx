@@ -5,8 +5,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TeacherList from '../pages/TeacherList';
 import Favorites from '../pages/Favorites';
+import { DarkTheme } from '@react-navigation/native';
 
 const { Navigator, Screen } = createBottomTabNavigator();
+
+const dark = DarkTheme;
 
 const StudyTabs: React.FC = () => {
     return (
@@ -15,12 +18,13 @@ const StudyTabs: React.FC = () => {
                 style: {
                     elevation: 0,
                     shadowOpacity: 0,
-                    height: 64,
+
                 },
                 tabStyle: {
+                    height: 64,
                     flexDirection: 'row',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
                 },
                 iconStyle: {
                     flex: 0,
@@ -43,10 +47,10 @@ const StudyTabs: React.FC = () => {
                 tabBarLabel: 'Proffys',
                 tabBarIcon: ({ color, size, focused }) => {
                     return (
-                        <Ionicons 
-                        name="ios-easel" 
-                        size={size} 
-                        color={focused ? '#8257e5' : color} 
+                        <Ionicons
+                        name="ios-easel"
+                        size={size}
+                        color={focused ? '#8257e5' : color}
                         />
                     )
                 }
