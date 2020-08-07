@@ -93,6 +93,7 @@ export const FavoritedImage  = styled.Image``;
 export const ContactButton  = styled(RectButton)`
     background: #04d361;
     flex: 1;
+    height: 56px;
     flex-direction: row;
     border-radius: 8px;
     justify-content: center;

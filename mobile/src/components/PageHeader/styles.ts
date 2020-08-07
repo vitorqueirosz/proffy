@@ -7,6 +7,12 @@ export const Container = styled.View`
 
 `;
 
+export const Header = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`;
+
 export const TopBar = styled.View`
     flex-direction: row;
     align-items: center;

@@ -1,18 +1,19 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, ReactNode } from 'react';
 
 import backIcon from '../../assets/images/icons/back.png';
 import logoImg from '../../assets/images/logo.png';
 
-import { Container, TopBar, TopBarButton, Image, LogoImage, Title } from './styles';
+import { Container, Header, TopBar, TopBarButton, Image, LogoImage, Title } from './styles';
 import { useNavigation } from '@react-navigation/native';
 
 interface PageHeaderProps {
     title: string;
+    headerRight?: ReactNode;
     filter?: string;
 
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({ title, children, headerRight }) => {
 
     const navigation = useNavigation();
 
@@ -30,7 +31,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
                 <LogoImage source={logoImg} resizeMode="contain"/>
             </TopBar>
 
-            <Title>{title}</Title>
+            <Header>
+                <Title>{title}</Title>
+                {headerRight}
+            </Header>
+
+            {children}
         </Container>
     );
 };

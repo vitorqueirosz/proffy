@@ -7,5 +7,5 @@ export const Container = styled.View`
 `;
 
 export const ScrollView = styled.ScrollView`
-    margin-top: -60px;
+    margin-top: -40px;
 `;
