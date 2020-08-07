@@ -10,7 +10,7 @@
  
 <br />
 
-## :pencil: Proffy
+## 📝 Proffy
  __Proffy__ is a completely online educational marketplace that helps teachers promote private classes where students can hire these professionals directly.
 
 </br>
@@ -19,7 +19,7 @@
 </p>
 </br>
 
-## :rocket: Technologies
+## 🚀 Technologies
 This project was developed with the following technologies:
 
 - [React](https://github.com/facebook/react)
@@ -31,7 +31,7 @@ This project was developed with the following technologies:
 - [React Navigation](https://reactnavigation.org/docs)
 </br>
 
-## :hammer: Tools
+## 🔨 Tools
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Insomnia](https://insomnia.rest)
 - [Android Studio](https://developer.android.com/studio)
@@ -49,7 +49,9 @@ You need to install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg
     
 </br>
 
-## :iphone: Run App
+## 📱 Run App
+
+    yarn start
 </br>
 
 With ♥ by [Vitor Queiroz](https://www.linkedin.com/in/vitor-queiroz-4b32131a3/)!
