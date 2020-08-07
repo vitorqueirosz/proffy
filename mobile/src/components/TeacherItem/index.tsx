@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { Linking } from 'react-native';
 
 import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
 import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
@@ -24,30 +25,46 @@ import {
     ContactButtonText,
     ContactButtonImage } from './styles';
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+    id: number;
+    name: string;
+    avatar: string;
+    bio: string;
+    cost: number;
+    whatsapp: string;
+    subject: string;
+
+}
+
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+    const handleLinkinToWhatsapp = useCallback(() => {
+        Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
+    }, []);
+
     return (
         <Container>
             <Profile>
-                <Image source={{ uri: 'https://github.com/vitorqueirosz.png'}}/>
+                <Image source={{ uri: teacher.avatar }}/>
 
 
                 <ProfileInfo>
-                    <NameText>Vitor Queiroz</NameText>
-                    <SubjecText>Biologia</SubjecText>
+                    <NameText>{teacher.name}</NameText>
+                    <SubjecText>{teacher.subject}</SubjecText>
                 </ProfileInfo>
             </Profile>
 
-            <BioText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                {'\n'}
-                 Ut atque modi soluta maxime, ducimus ullam incidunt animi quam, tenetur doloribus possimus eos. Tempore inventore quae ratione minus perferendis numquam possimus.
-            </BioText>
+            <BioText>{teacher.bio}</BioText>
 
             <Footer>
                 <PriceText>
                     Preco/hora {'   '}
 
-                    <PriceValueText>R$ 50,00</PriceValueText>
+                    <PriceValueText>R$ {teacher.cost}</PriceValueText>
                 </PriceText>
 
                 <ButtonsContainer>
@@ -59,7 +76,7 @@ const TeacherItem: React.FC = () => {
                         <FavoritedImage source={unfavoriteIcon}/>
                     </FavoritedButton>
 
-                    <ContactButton>
+                    <ContactButton onPress={handleLinkinToWhatsapp}>
                         <ContactButtonImage source={whastsAppIcon}/>
                         <ContactButtonText>Entrar em contato</ContactButtonText>
                     </ContactButton>

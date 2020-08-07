@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useState, useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -9,14 +9,16 @@ import studyIcon from '../../assets/images/icons/study.png';
 import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
+import api from '../../services/api';
 
-import { 
-    Container, 
+
+import {
+    Container,
     Icon,
-    Image, 
-    Title, 
-    TitleBold, 
-    ButtonsContainer, 
+    Image,
+    Title,
+    TitleBold,
+    ButtonsContainer,
     Button,
     ButtonImage,
     ButtonText,
@@ -26,6 +28,7 @@ import {
 
 const Landing: React.FC = () => {
     const { toggleTheme } = useContext(ThemeContext);
+    const [totalConnections, setTotalConnections] = useState(0);
 
     const navigation = useNavigation();
 
@@ -37,9 +40,19 @@ const Landing: React.FC = () => {
         navigation.navigate('study');
     }, []);
 
+    useEffect(() => {
+        api.get('/connections').then(response => {
+            const { total } = response.data;
+
+            setTotalConnections(total);
+        })
+
+
+    }, []);
+
     return (
         <Container>
-            <Icon 
+            <Icon
                 onPress={toggleTheme}
                 name="moon"
                 size={25}
@@ -69,7 +82,7 @@ const Landing: React.FC = () => {
 
 
             <TotalConnections>
-                Total de 300 conexoes ja realizadas{' '}
+                Total de {totalConnections} conexoes ja realizadas{' '}
 
                 <HeartImage source={heartIcon}/>
             </TotalConnections>
